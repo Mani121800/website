@@ -1,0 +1,549 @@
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Rajdhani', sans-serif;
+  margin-bottom: 10px;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+a {
+  color: #f1eeec;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #c74c00;
+}
+
+/* Header */
+/* Header styles */
+header {
+  background: #141F35;
+  color: #fff;
+  position: relative;/* Added for positioning hero strip */
+  overflow: hidden; /* To ensure no overflow outside the header */ 
+  padding: 5px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  
+  margin-left: 40px;
+  display: flex;
+  align-items: center;
+}
+
+
+.logo img {
+  width: 50px;
+  margin-right: 20px;
+}
+
+.logo span {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  letter-spacing: 1px;
+  margin-left: 30px;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0px 12px;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #e75319; /* Updated to your desired color */
+  transition: width 0.4s;
+  position: absolute;
+  left: 0;
+  bottom: -7px; /* Adjust this value to control the space between text and underline */
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul li a:hover {
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  letter-spacing: 1px;
+  margin: 0 15px;
+  margin-top: 25px;
+  font-size: 1.2rem;
+  
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0px 12px;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #e75319; /* Updated to your desired color */
+  transition: width 0.4s;
+  position: absolute;
+  left: 0;
+  bottom: -7px; /* Adjust this value to control the space between text and underline */
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul li a:hover {
+  font-weight: bold;
+}nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  letter-spacing: 1px;
+  margin: 0 15px;
+  margin-top: 25px;
+  font-size: 1.2rem;
+  
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0px 20px;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #e6e5e4; /* Updated to your desired color */
+  transition: width 0.4s;
+  position: absolute;
+  left: 0;
+  bottom: -7px; /* Adjust this value to control the space between text and underline */
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul li a:hover {
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url("{% static 'images/about-us-main-image.jpg' %}"); 
+  background-size: cover;
+  height:250px;
+  background-position: center;
+  padding: 150px 0; /* Increased padding */
+  color: #fff;
+  background-color: #141F35;
+  text-align: center;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: 4.5rem;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  line-height: 1.6; /* Added line-height for readability */
+  max-width: 800px; /* Added max-width for better formatting */
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 15px 30px;
+  background-image: linear-gradient(to right,#f83600 0%,  rgba(254, 114, 0, 0.897) 51%, #ee9323 100%);
+  color: white;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
+  
+}
+
+.btn-primary:hover {
+  background-color: #c74c00;
+}
+
+.btn-primary span {
+  color: white;
+  font-weight: bold;
+  margin: 0 10px; /* Added margin for spacing */
+}
+  
+
+
+
+.best-offers {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom:2px;
+    text-align: center;
+  }
+  
+  .best-offers h5 {
+    color: #FA6220;
+    font-size: 1.2rem;
+    margin-bottom:2px;
+    letter-spacing: 3px;
+    font-weight:bolder;
+  }
+
+  .best-offers h2 {
+    color: #1a1918;
+    margin-top:2px;
+    font-size: 2.5em;
+    margin-bottom: 5px;
+    letter-spacing: 3px;
+  }
+
+  
+  .best-offers p {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 9px;
+    text-align: justify; /* Center-aligns the text */
+    line-height: 1.5; /* Adjusts line height for better readability */
+
+  }
+  
+  /* Pricing Container */
+.pricing-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center items horizontally */
+    gap: 20px;
+    padding: 20px;
+    height:650px;
+  }
+  
+  /* Pricing Box */
+  .pricing-box {
+    flex: 1;
+    max-width: 275px; /* Adjust as needed */
+    min-height: 550px; /* Adjust as needed */
+    background-color: #f3ebeb;
+    border: 0,5px solid #FA6220;
+    box-shadow: darkgrey;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  }
+
+  .pricing-box img {
+    margin-top: 20px;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 150px; /* Set a maximum height */
+    object-fit: cover; /* Cover the area of the box without distortion */
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 20px; /* Space below the image */
+  }
+  
+  .pricing-box:hover {
+    background-color: #FA6220; /* Change background on hover */
+    color: #fff; /* Change text color on hover */
+    transform: translateY(-10px); /* Lift the box slightly on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+  }
+  
+  /* Pricing Box Title */
+  .pricing-box h3 {
+    font-size: 1.5em;
+    margin-top:10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Pricing Box Price */
+  .pricing-box .price {
+    font-size: 2.5em;
+    margin: 10px 0;
+  }
+  
+  /* Pricing Box Features */
+  .pricing-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  .pricing-box ul li {
+    font-size: 1em;
+    margin: 10px 0;
+  }
+  
+  .pricing-box ul li:before {
+    content: "\2022"; /* Unicode bullet */
+    color: #FA6220; /* Bullet color */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+  
+  
+  .btn-get-started {
+    background-color: #FA6220;
+    color: #fff;
+    border: none;
+    width:75%;
+    height:75px;
+    font-weight: bolder;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 30px;
+    transition: background-color 0.3s;
+  }
+
+  .pricing-box .btn-get-started::after {
+    content: '→'; /* Arrow character */
+    font-size: 1.5em; /* Size of the arrow */
+    position: absolute; /* Absolute positioning */
+    right: 10px; /* Position the arrow inside the button */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust vertical alignment */
+    transition: color 0.3s; /* Smooth transition for color change */
+  }
+  
+  .pricing-box:hover .btn-get-started {
+    width:75%;
+    height:75px;
+    background-color: #e7e1df;
+    color:#FA6220;
+    transform: translateY(-3px);
+  }
+  
+  
+  .footer {
+    position: relative;
+    background-color: #141f35;
+    color: #fff;
+    padding: 20px 0;
+    height: auto; /* Auto height to fit content */
+    font-size: 14px;
+    overflow: hidden; /* Ensure no overflow issues */
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-contact {
+    flex: 1;
+    margin-top: 20px;
+}
+
+.footer-contact h3 {
+    margin-bottom: 10px;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-contact a {
+    color: #FA6220;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact i {
+    margin-right: 8px;
+    color: #FA6220;
+}
+
+.footer-links, .footer-services {
+    flex: 1;
+    margin: 0 15px;
+}
+
+.footer-links ul, .footer-services ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li, .footer-services li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.footer-links li::before, .footer-services li::before {
+    content: "\2022";
+    font-size: 20px;
+    color: #FA6220;
+    position: absolute;
+    left: -25px;
+}
+
+.footer-links a, .footer-services a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover, .footer-services a:hover {
+    color: #FA6220;
+}
+
+.footer-social a {
+    color: #fff;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #FA6220;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 10px;
+    border-top: 1px solid #444;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-strip {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 20%;
+    background-color: #FA6220;
+    z-index: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero .container, .services-content, .about .container, .pricing-container, .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-text, .about-text, .services-right {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-strip {
+        width: 100%;
+        height: 50px;
+        position: static;
+    }
+
+    .pricing-box {
+        width: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links, .footer-services {
+        margin: 20px 0;
+    }
+
+    .footer-strip {
+        width: 100%;
+        height: 50px;
+        position: static;
+    }
+}
+
+
+  

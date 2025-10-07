@@ -1,0 +1,1459 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+
+}
+
+body {
+
+     overflow-x: visible;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+h1, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+  overflow:visible;
+  margin: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 50px;
+    position:relative;
+    z-index:2;
+  }
+
+
+body {
+    width:100vw;
+    height:100vh;
+    max-width:fit-content;
+    font-family: "rajdhani", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #cac8c8;
+}
+
+/* Container for centering content */
+.container {
+  max-width: 100%;
+  margin: auto;
+  overflow: visible;
+  display: flex;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 50px;
+  position:relative;
+  z-index:2;
+}
+
+
+.header {
+  position: fixed;
+  width: 100%;
+  color: #fff;
+  overflow: visible;
+  top: 0;
+  left: 0;
+  background-color: rgba(20, 31, 53, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 10;
+  transition: background-color 0.3s ease;
+  background-size: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.header .container {
+  display: flex;
+  background: rgba(20, 31, 53, 0.9) url(/static/images/banner-1.jpg) no-repeat center center;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0px;
+  display: flex;
+  z-index:-10;
+  background: none;
+}
+
+.logo {
+  margin-left: 40px;
+  display: flex;
+  align-items: center;
+
+}
+
+
+.logo img {
+  margin-top:10px;
+  width: 40px;
+
+}
+
+.logo span {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top:10px;
+
+}
+
+nav {
+  opacity:1;
+}
+
+nav ul {
+  position: relative;
+  list-style: none;
+  display: flex;
+  z-index:1000;
+  padding: 0; /* Added to ensure no extra padding/margin */
+  margin: 0;  /* Added to ensure no extra margin */
+}
+
+nav ul li {
+
+  letter-spacing: 1px;
+  margin: 10px 15px 0;
+  font-size: 1.2rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 5px;
+  position: relative;
+  display:block;
+  transition: font-weight 0.4s;
+}
+
+nav ul li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #e6e5e4; /* Updated to the color you want */
+  transition: width 0.4s;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul li a:hover {
+  font-weight: bolder;
+}
+
+/* Dropdown Styling */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 30px;
+  min-width: 200px;
+  background-color: rgba(20, 31, 53, 0.8);
+  /* border-radius: 12px; */
+  padding:  0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  transition: all 0.3s ease-in-out;
+}
+
+.dropdown-content li {
+  list-style: none;
+}
+
+.dropdown-content li a {
+  display: block;
+  /* padding: 12px 20px; */
+  color: #faf2f2;
+  font-size: 16px;
+  font-family: 'Segoe UI', sans-serif;
+  text-decoration: none;
+  transition: background 0.3s, padding-left 0.3s;
+  border-left: 3px solid transparent;
+
+}
+
+.dropdown-content li a:hover {
+  /* background-color: #f5f5f5; */
+  /* padding-left: 26px; */
+  /* border-left: 3px solid #ff6600;  */
+  color: #fa9006;
+  font-weight: 500;
+}
+
+.dropdown-content {
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+}
+
+.dropdown.open .dropdown-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+
+.hamburger-menu {
+ width:100%;
+  display:flex;
+  flex-direction: column;
+  height: auto;
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  padding: 1px;
+
+}
+
+.hamburger-icon {
+  width: 30px;
+  height: auto;
+  display: block;
+  cursor: pointer;
+  background-size: contain;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  z-index: 1;
+}
+
+
+.email-float {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  z-index: 9999;
+  background-color: #FA6220;
+  color: white;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  border-radius: 50%;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom:60px;
+
+}
+
+.email-float:hover {
+  transform: scale(1.1);
+
+}
+
+.hero {
+    width: 100vw;
+    height: 85vh;
+    position: relative; /* Required for overlay positioning */
+    background-image: url(/static/images/banner-1.jpg);
+    background-color: rgba(20, 31, 53, 0.8); /* Semi-transparent background */
+    background-size: cover;
+    background-position:center;
+    color: #f1eded;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden; /* To ensure the color strip does not overflow */
+    z-index: -2;
+
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index:-5;
+  background-color: #141f35;
+
+  background-image: url(/static/images/banner-1.jpg);
+  background-size: cover;
+  background-position: center;
+
+}
+
+
+.hero .container {
+  position: relative;
+  z-index: 20; /* Ensure the text and buttons are on top of the overlay*/
+  padding: 60px 0; /* Adjust as needed */
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: 4.5rem;
+  margin-bottom: 50px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  line-height: 1.6; /* Added line-height for readability */
+  max-width: 800px; /* Added max-width for better formatting */
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: rgba(43, 43, 71, 0.8); /* Semi-transparent background */
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
+
+}
+
+.btn-primary a{
+  color:#e6e5e4;
+  text-decoration: none;
+}
+
+.btn-primary a:hover {
+  color: #f78d14;
+}
+
+.btn-primary span {
+  color: white;
+  font-weight: bold;
+  margin: 0 10px; /* Added margin for spacing */
+}
+
+
+
+
+ #contact {
+  color:#f78d14;
+  background-color: rgb(245, 241, 241);
+   padding: 30px 20px;
+  text-decoration: none;
+}
+
+
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 25px;
+  margin-top: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-left-container, .contact-right-container {
+  flex: 1;
+
+
+}
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+  height:600px;
+  gap: 25px;
+}
+
+.contact-left h4{
+    margin-left: 25px;
+}
+
+@keyframes bottomToTop {
+  from {
+      opacity: 0;
+      transform: translateY(70px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+.contact-item {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  background-color: white;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  text-align: left; /* Align text to the left */
+  animation: bottomToTop 0.9s ease-out;
+}
+
+.contact-item img {
+  width: 80px;
+  height: 80px;
+  margin-left:75px;
+  margin-right: 2px;
+}
+
+
+
+.contact-item h3 {
+  text-align:center;
+  margin:0;
+  font-size: 1.5em;
+  color: #fa6220;
+  letter-spacing: 1px;
+}
+
+.contact-item p {
+  text-align: center;
+  margin: 0;
+  font-size: 1em;
+  color: #333;
+}
+
+/* To ensure h3 and p are centered vertically relative to each other */
+.contact-item .text-content {
+  display: flex;
+  width:450px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-item .text-content1 h3{
+  margin-left:115px;
+  letter-spacing: 1px;
+}
+
+.contact-item .text-content1 p{
+  margin-left: 120px;
+  letter-spacing: 1px;
+}
+
+.contact-item .text-content2 h3{
+  margin-left:60px;
+  letter-spacing: 0.5px;
+}
+
+.contact-item .text-content2 p{
+  margin-left: 60px;
+  letter-spacing: 0.5px;
+}
+
+.contact-form {
+  background-color: rgb(255, 120, 42);
+  padding: 10px;
+  border-radius: 15px;
+  width:500px;
+  height:550px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding:15px 10px 5px 30px;
+  align-items: left;
+}
+
+.contact-form h1 {
+  font-size: 2.5em;
+  color: #f7f3f2;
+  text-align: left;
+  letter-spacing: 2.5px;
+  font-weight: bolder;
+}
+
+.contact-form input {
+
+  margin-right: 50px;
+  justify-items: center;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  width:97%;
+  height:60px;
+  font-size: 1.2em;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.contact-form textarea{
+  font-size: 1.5em;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  box-sizing: border-box;
+  height:170px;
+  width:97%;
+}
+
+.contact-form button {
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 25px;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  font-weight: light;
+  background-color: rgb(255, 120, 42);;
+  color: rgb(241, 232, 232);
+  cursor: pointer;
+  align-items: center;;
+  width:97%;
+  height:60px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #15143f;
+}
+
+.success-message {
+  color: rgb(253, 104, 4);
+  font-size: 1.5em;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  margin-right: 80px;
+  text-align: right;
+}
+
+
+
+.map-container {
+  margin-top: 50px;
+  border-radius: 10px;
+  overflow: hidden;
+
+}
+
+.map-container iframe {
+  border: none;
+  border-radius: 10px;
+}
+.footer {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: flex-start; /* Align elements to the left */
+  position: relative;
+  color: #fff;
+  padding: 10px 0;
+  font-weight: bold;
+  opacity:5;
+  background-image: url(/static/images/footer-blue-background.png);
+  z-index: 2;
+  background-size: cover; /* Ensure the background image covers the footer */
+  background-position: center; /* Center the background image */
+  height: auto; /* Auto height to fit content */
+  overflow: hidden; /* Ensure no overflow issues */
+}
+
+.footer-content {
+  margin-top: 10px;
+  margin-left:30px;
+  display: flex;
+  justify-content: space-between; /* Space between logo and links */
+  align-items: flex-start; /* Align elements to the top */
+  width: 100%; /* Make sure content spans the full width */
+  padding: 10px 20px; /* Add padding for spacing */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column; /* Stack logo and text vertically */
+  align-items: flex-start; /* Align items to the left */
+  flex: 1; /* Allow the logo to take up available space */
+}
+
+.footer-logo .logo {
+  margin-top: auto;
+  display: flex;
+  align-items: center; /* Align logo and text in the same line */
+}
+
+.footer-logo img {
+  max-width: 50px; /* Adjust the logo width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 15px; /* Space between logo and text */
+
+}
+
+.footer-logo span {
+  position: absolute;
+  margin-left:50px;
+  margin-top: 3px;
+  font-size: 1.9em;
+  font-weight: bold;
+
+}
+
+.footer-logo p {
+  margin-left: 50px;
+  margin-top:10px;
+  width:350px;
+  font-size: 1em;
+  font-weight: lighter;
+  display: flex;
+  letter-spacing: 0.9px;
+  align-items: left; /* Align image and text in the same line */
+}
+
+.footer-logo p img {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px; /* Space between image and text */
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: row; /* Stack contact information vertically */
+  margin-left:40px;
+  margin-top: 130px;
+  width:50px;
+}
+
+.footer-contact img {
+  vertical-align: middle;
+  color:#f08229;
+}
+
+
+.footer-contact p {
+  margin: 1px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: left; /* Align contact image and text in the same line */
+}
+
+
+.footer-contact a {
+  display: flex;
+  flex-direction: row;
+  color: #FA6220;
+  font-size: 1em;
+}
+
+
+.footer-links
+{
+  flex: 1;
+  margin-top: -1px;
+  margin-left: 95px;
+}
+
+.footer-services {
+  flex: 1;
+  margin-top: -1px;
+  margin-right:400px;
+}
+
+.footer-links ul,
+.footer-services ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1px;
+  margin: 0;
+}
+
+.footer-links li,
+.footer-services li {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.footer-links li::before,
+.footer-services li::before {
+  content: "\2022";
+  font-size: 20px;
+  color: #FA6220;
+  position: absolute;
+  left: -17px;
+}
+
+.footer-links a,
+.footer-services a {
+  color: #fff;
+  font-weight: lighter;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover,
+.footer-services a:hover {
+  color: #FA6220;
+}
+
+.footer-social {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  position: relative; /* Position social icons */
+  padding: 10px 0; /* Add padding for spacing */
+}
+
+.footer-social a {
+  color: #fff;
+  margin-right: 10px; /* Adjust margin between icons */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #FA6220; /* Change color on hover */
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between; /* Distribute space between items */
+  align-items: center; /* Center items vertically */
+  text-align: left;
+  border-top: 1px solid #464444;
+  width: 100%;
+  height:15px;
+  padding: 10px 1px; /* Add padding for spacing */
+  box-sizing:content-box;
+}
+
+.footer-bottom p {
+  margin: 0; /* Remove default margins */
+  margin-left: 70px;
+  margin-top:5px;
+}
+
+.footer-bottom span a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em; /* Adjust the size of the icon */
+  border-radius: 50%; /* Makes the button round */
+  width: 30px; /* Width of the round button */
+  height: 30px; /* Height of the round button */
+  display: inline-flex; /* Use flex to center content */
+  align-items: center; /* Vertically center the icon */
+  justify-content: center; /* Center the icon horizontally */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+
+}
+
+.footer-bottom span a:hover {
+  background-color: #FA6220; /* Change background color on hover */
+  color: #f8f6f4; /* Change icon color on hover */
+  transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+.footer-strip {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 20%;
+  /*background-image: url(/static/images/footer-u-design.png);*/
+  background-color: #f08229;
+  background-size: cover; /* Ensure the background image covers the strip */
+  background-position: center; /* Center the background image */
+  z-index: 2;
+}
+
+
+/* Move to Top Button Styles */
+.move-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color:#222235;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  font-size: 24px;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.move-to-top:hover {
+  background-color: #0056b3;
+}
+
+.move-to-top.show {
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px)  {
+
+
+
+* {
+  box-sizing: border-box;
+
+}
+
+
+body {
+     overflow-x: hidden;
+}
+
+.container{
+    overflow: visible;
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 50px; /* Space for the strip */
+    z-index:2; /* Above the color strip */
+  }
+
+header {
+    position: relative;
+    padding: 20px; /* Add padding for better spacing on mobile */
+    text-align: center; /* Center-align text in the header */
+    box-shadow: none; /* Remove shadow on mobile for a cleaner look */
+}
+
+header nav {
+    flex-direction: row;
+    align-items: center; /* Center align navigation links */
+}
+
+header nav a {
+    padding: 10px 0; /* Add padding to links for better touch targets */
+}
+
+header .container {
+  flex-direction: row; /* Stack items vertically for mobile view */
+  align-items: flex-start; /* Align items to the start of the container */
+  padding: 10px; /* Add padding for better spacing */
+
+}
+
+.logo {
+  margin: 0;
+  flex-direction: row;
+  align-items: center; /* Center align the logo for mobile */
+}
+
+.logo img {
+  width: 40px; /* Adjust width of logo image for mobile */
+  margin: 5px 0; /* Reduce top margin for a more compact layout */
+}
+
+.logo span {
+  font-size: 1.2em; /* Adjust font size of the logo text for mobile */
+  margin: 5px 0; /* Reduce margin for better spacing */
+}
+
+nav ul {
+  display: none; /* Hide the navigation menu by default */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position:static;
+    color: #fff;
+    background-color: transparent;
+    width: auto;
+    gap:1px;
+}
+
+nav ul.active {
+display: flex; /* Show the navigation menu when active */
+}
+nav ul li {
+  margin:  0;
+  text-align: center;
+}
+
+nav ul li a{
+  color: #fff;
+
+}
+.hamburger-menu{
+  display:flex;
+
+  justify-content: center;
+
+}
+
+.dropdown-content {
+    position: absolute;
+    box-shadow: none;
+   background-color: rgba(20, 31, 53, 0.8);
+  }
+
+
+
+#contact {
+  padding:10px; /* Reduced padding for mobile */
+}
+.contact-content {
+  flex-direction: column;
+  gap: 20px;
+  padding: 0px 50px;
+}
+
+
+
+.contact-left{
+  width: 100%;
+  height: auto;
+  padding: 1px;
+}
+
+.contact-left h4 {
+  margin-left: 50px;
+}
+
+.contact-item {
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;
+
+}
+
+.contact-item img {
+  margin-left: 100px;
+  margin-bottom: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.contact-item .text-content {
+  width: auto;
+  align-items: center;
+}
+
+.contact-item .text-content h3{
+  text-align: center;
+  margin-left:30px;
+}
+
+.contact-item .text-content p{
+  text-align: center;
+  margin:0;
+}
+
+.contact-item .text-content1 h3{
+  text-align: center;
+  margin-left:60px;
+}
+.contact-item .text-content1 p{
+  text-align: center;
+  margin-left:70px;
+}
+
+.contact-item .text-content2 h3{
+  text-align: center;
+  margin-left:10px;
+}
+.contact-item .text-content2 p{
+  text-align: center;
+  margin-left:10px;
+}
+
+.contact-form {
+  width: 100%;
+  height: auto;
+  padding: 5px;
+}
+
+.contact-form h1 {
+  font-size: 2em;
+}
+
+.contact-form input,.contact-form button {
+  justify-content: space-evenly;
+  font-size: 1em;
+  margin-right:30px;
+  height: 50px;
+}
+
+.contact-form textarea{
+  justify-content:center;
+  font-size: 1.2em;
+  height: auto;
+}
+
+.success-message {
+  margin-right: 0;
+  font-size: 1.2em;
+  justify-content: center;
+
+}
+
+
+
+.map-container {
+  margin-top: 20px; /* Reduce top margin on smaller screens */
+  border-radius: 5px; /* Smaller border radius for mobile */
+}
+
+.map-container iframe {
+  width: 100%; /* Make iframe full width of its container */
+  height: 200px; /* Set a fixed height for the iframe on mobile */
+  border-radius: 5px; /* Match border radius with container */
+}
+
+
+.footer {
+  display: flex;
+  flex-direction: column; /* Stack footer content vertically */
+  align-items: center; /* Center align footer content */
+  justify-content: center; /* Center content vertically */
+  padding: 20px; /* Add padding */
+  text-align: center; /* Center align text */
+}
+
+.footer-content {
+  display: flex;
+  flex-direction:column; /* Stack elements vertically */
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo {
+  flex-direction: column; /* Stack logo and text vertically */
+  align-items: center; /* Center logo and text */
+  text-align: center; /* Center text */
+  margin-bottom: 15px; /* Add space between logo and other sections */
+}
+
+.footer-logo .logo {
+  margin:0;
+  align-items: center;
+}
+
+.footer-logo img {
+  max-width: 40px; /* Adjust logo size */
+  margin-right:5px;
+}
+
+.footer-logo span {
+  font-size: 1.5em; /* Adjust font size */
+  margin: 55px 15px;
+  margin-right:10px;
+  margin-top:35px;
+  display: block; /* Ensure it takes up full width for centering */
+}
+
+.footer-logo p {
+  font-size: 0.9em; /* Adjust font size for readability */
+  margin-top:30px;
+  margin-left: -30px;
+  text-justify: center;
+
+}
+
+.footer-contact {
+  flex-direction: column; /* Stack contact information vertically */
+  align-items: center; /* Center contact information */
+  margin-right:29px;/* Remove margin */
+  padding: 10px 100px; /* Adjust padding */
+}
+
+.footer-contact img {
+  margin-right: 0; /* Remove margin */
+}
+
+.footer-contact p {
+  font-size: 0.9em; /* Adjust font size */
+  text-align: center; /* Center text */
+}
+
+.footer-contact a {
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.footer-links {
+  margin-left:-20px;
+  justify-content:center;
+}
+
+.footer-services {
+  justify-content:center;
+
+}
+
+.footer-links ul,
+.footer-services ul {
+  align-items: center; /* Center align items */
+  text-align: center; /* Center text within lists */
+}
+
+.footer-services {
+  align-items: center; /* Center services on mobile */
+  margin: 0 auto; /* Center the footer content */
+}
+
+.footer-links li,
+.footer-services li {
+  padding-left: 0; /* Remove left padding on mobile */
+  text-align: center; /* Center text */
+}
+
+.footer-links li::before,
+.footer-services li::before {
+  content: "\2022";
+  font-size: 20px;
+  color: #FA6220;
+  position: absolute;
+  left: -17px;
+}
+
+.footer-bottom {
+  justify-content: space-between;
+  flex-direction: column; /* Stack footer bottom items vertically */
+  align-items: center; /* Center items horizontally */
+  padding: 5px; /* Adjust padding */
+  text-align: center; /* Center text alignment */
+}
+
+.footer-bottom p {
+  font-size: 0.8em; /* Adjust font size for readability */
+  margin: 0; /* Remove default margin */
+}
+
+
+
+.footer-strip {
+  display: none; /* Hide footer strip on mobile */
+}
+
+.services-content
+  {
+    padding: 10px;
+  }
+.footer-bottom {
+  justify-content: space-between;
+  flex-direction: column; /* Stack footer bottom items vertically */
+  align-items: center; /* Center items horizontally */
+  padding: 5px; /* Adjust padding */
+  text-align: center; /* Center text alignment */
+}
+
+.footer-bottom p {
+  font-size: 0.8em; /* Adjust font size for readability */
+  margin: 0; /* Remove default margin */
+}
+
+.footer-strip {
+  display: none; /* Hide footer strip on mobile */
+}
+
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+
+  .container {
+    padding-right: 30px;
+
+  }
+  header {
+    padding: 25px;
+  }
+
+  header nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  header nav a {
+    padding: 8px 12px;
+  }
+
+  header .container {
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+  }
+
+  /* Logo adjustments */
+  .logo {
+    margin: 0;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 40px; /* Adjust width of logo */
+    margin: 0 10px; /* Adjust margins */
+  }
+
+  .logo span {
+    font-size: 1.4em; /* Slightly increase font size */
+    margin: 0 10px; /* Adjust margins */
+  }
+
+  /* Navigation menu for tablet view */
+  nav ul {
+    display: none; /* Show navigation by default */
+    flex-direction: row; /* Align items in a row */
+    position: static; /* Remove absolute positioning */
+    background-color: transparent; /* Remove background */
+    width: auto;
+    justify-content:right; /* Center navigation */
+  }
+
+  nav ul.active {
+    width: auto; /* Adjust width */
+    display:flex;
+  }
+
+  nav ul li {
+    margin: 0 15px; /* Space out menu items */
+  }
+
+  /* Hamburger menu adjustments */
+  .hamburger-menu {
+    display:block;
+  flex-direction: row;
+  align-items: flex-start;
+  text-align: left;
+  }
+
+  #contact {
+    padding: 20px; /* Increase padding for better spacing on tablets */
+  }
+
+  .contact-content {
+    flex-direction: row; /* Arrange items in a row */
+    gap: 40px; /* Increase gap between items */
+    padding: 20px; /* Add padding for better spacing */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .contact-left {
+    width: 100%; /* Adjust width to fit side by side */
+    padding: 10px; /* Increase padding */
+  }
+
+  .contact-left h4 {
+    margin-left: 20px; /* Reduce left margin */
+  }
+
+  .contact-item {
+    flex-direction: row; /* Arrange items in a row */
+    align-items: center; /* Center align items vertically */
+    text-align: left; /* Align text to the left */
+    margin-bottom: 20px; /* Add margin below each item */
+  }
+
+  .contact-item img {
+    margin-left: 0; /* Remove left margin */
+    margin-right: 20px; /* Add right margin for spacing */
+    width: 40px; /* Reduce image size */
+    height: 40px; /* Reduce image size */
+  }
+
+  .contact-item .text-content,
+  .contact-item .text-content1,
+  .contact-item .text-content2 {
+    width: auto;
+    align-items: flex-start; /* Align content to the start */
+    text-align: left; /* Align text to the left */
+    margin-left: 0; /* Remove left margin */
+  }
+
+  .contact-item .text-content h3,
+  .contact-item .text-content1 h3,
+  .contact-item .text-content2 h3 {
+    margin:0;
+    justify-content: center;
+  }
+
+  .contact-item .text-content p,
+  .contact-item .text-content1 p,
+  .contact-item .text-content2 p {
+    margin-left: 10px; /* Reduce margin for consistency */
+  }
+
+  .contact-form {
+    width: 100%; /* Adjust width to fit side by side */
+    padding: 20px; /* Increase padding for spacing */
+  }
+
+  .contact-form h1 {
+    font-size: 1.8em; /* Slightly reduce font size for tablets */
+  }
+
+  .contact-form input,
+  .contact-form button {
+    font-size: 1em; /* Maintain font size */
+    margin-right: 0; /* Remove right margin */
+    width: 100%; /* Make inputs full width */
+    margin-bottom: 10px; /* Add margin below inputs */
+  }
+
+  .contact-form textarea {
+    font-size: 1.2em; /* Maintain font size */
+    width: 100%; /* Make textarea full width */
+    height: auto; /* Adjust height */
+  }
+
+  .success-message {
+    font-size: 1.2em; /* Maintain font size */
+    justify-content: center; /* Center align */
+    margin-top: 20px; /* Add top margin */
+  }
+
+
+  /* Map adjustments */
+  .map-container {
+    margin-top: 15px;
+    border-radius: 8px;
+  }
+
+  .map-container iframe {
+    height: 250px;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column; /* Stack footer content vertically */
+    align-items: center; /* Center align footer content */
+    justify-content: center; /* Center content vertically */
+    padding: 20px; /* Add padding */
+    text-align: center; /* Center align text */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo {
+    flex-direction: column; /* Stack logo and text vertically */
+    align-items: center; /* Center logo and text */
+    text-align: center; /* Center text */
+    margin-bottom: 15px; /* Add space between logo and other sections */
+}
+
+.footer-logo .logo {
+    margin: 0;
+    align-items: center;
+}
+
+.footer-logo img {
+    max-width: 40px; /* Adjust logo size */
+    margin-right: 5px;
+}
+
+.footer-logo span {
+    font-size: 1.5em; /* Adjust font size */
+    margin: 55px 15px;
+    margin-right: 10px;
+    margin-top: 35px;
+    display: block; /* Ensure it takes up full width for centering */
+}
+
+.footer-logo p {
+    font-size: 0.9em; /* Adjust font size for readability */
+    margin-top: 30px;
+    margin-left: -30px;
+    text-justify: center;
+}
+
+
+.footer-contact {
+  display:flex;
+    flex-direction:column;
+ justify-content: center;
+
+ margin-left:10px;
+
+}
+
+.footer-contact img {
+
+   align-items: center;
+ }
+
+.footer-contact a {
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.footer-links {
+    margin-left: -20px;
+    justify-content: center;
+}
+
+.footer-services {
+    justify-content: center;
+    align-items: center; /* Center services on mobile */
+    margin: 0 auto; /* Center the footer content */
+}
+
+.footer-links ul,
+.footer-services ul {
+    align-items: center; /* Center align items */
+    text-align: center; /* Center text within lists */
+}
+
+.footer-links li,
+.footer-services li {
+    padding-left: 0; /* Remove left padding on mobile */
+    text-align: center; /* Center text */
+}
+
+.footer-links li::before,
+.footer-services li::before {
+    content: "\2022";
+    font-size: 20px;
+    color: #FA6220;
+    position: absolute;
+    left: -17px;
+}
+
+.footer-bottom {
+    justify-content: space-between;
+    flex-direction: column; /* Stack footer bottom items vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 5px; /* Adjust padding */
+    text-align: center; /* Center text alignment */
+}
+
+.footer-bottom p {
+    font-size: 0.8em; /* Adjust font size for readability */
+    margin: 0; /* Remove default margin */
+}
+
+.footer-social{
+  display:none;
+
+}
+
+.footer-strip {
+    display: none; /* Hide footer strip on mobile */
+}
+
+}
+
+
+
+

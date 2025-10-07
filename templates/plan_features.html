@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+
+        <!-- title-->
+        <title>Aura Harks Technology</title>
+        {% load static %}
+
+        <!-- Favicon -->
+        <link rel="icon" href="{% static 'images/harks-logo.png' %}" type="image/x-icon">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+        <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Roboto+Condensed:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+
+    <style>
+
+/* General Styling */
+.plan-features-container {
+    padding: 50px;
+    background-color: #f4f6f9;
+    /*font-family: 'Roboto', sans-serif;*/
+}
+
+.plan-features h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: dark blue;
+}
+
+/* Table Styling */
+.plan-features-table {
+    width: 90%;
+    margin: 0 auto;
+    /*border-collapse: collapse;*/
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.plan-features-table th, .plan-features-table td {
+
+    padding: 20px 30px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.plan-features-table th {
+    background-color: dark blue
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.plan-features-table td {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Checkmark Styling */
+.checkmark {
+    font-size: 18px;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+/* Features List */
+.features-list {
+    margin-top: 15px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.features-list p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Toggle Button for Dropdown */
+.toggle-features-btn {
+    background-color: #fa6400;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.toggle-features-btn:hover {
+    background-color: dark blue;
+}
+
+.toggle-features-btn:focus {
+    outline: none;
+}
+
+/* Buy Plan Button */
+.btn-primary {
+    background-color: dark blue;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #fa6400;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .plan-features-table {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .toggle-features-btn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .btn-primary {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+}
+
+
+    </style>
+
+<body>
+    <section class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="{% static 'images/harks-logo.png' %}" alt="Aura Harks Technology Logo">
+                <span div data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000">AURA HARKS TECHNOLOGY</span>
+            </div>
+            <div class="hamburger-menu">
+                <span class="hamburger-icon">☰</span>
+            </div>
+            <nav>
+                <ul div data-aos="flip-right"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000">
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'home' %}#about">About</a></li>
+                    <li><a href="{% url 'home' %}#services">Services</a></li>
+                    <li><a href="{% url 'home' %}#pricing">Pricing</a></li>
+                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <section class="hero" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <div class="hero-text" data-aos="fade-up" data-aos-duration="1500">
+                <div class="hero-content">
+                    <h1 class="hero-title" data-aos="fade-up" data-aos-duration="1500">Pricing</h1>
+                    <p class="hero-text" data-aos="flip-center" data-aos-duration="1500">We are here to help you.</p>
+                </div>
+                <div class="btn-primary" data-aos="fade-left" data-aos-duration="2000">
+                    <a href="{% url 'home' %}">Home</a>
+                    <span> >> </span>
+                    <a href="{% url 'home' %}#pricing">Pricing</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="plan-features-container">
+    <h1>Our Pricing Plans</h1>
+
+    <table class="plan-features-table">
+        <thead>
+            <tr>
+                <th>Plan</th>
+                <th>Price</th>
+                <th>Features</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+             Basic Plan Row
+            <tr>
+                <td rowspan="1"><strong>Basic</strong></td>
+                <td rowspan="1">$99 (₹8,217) <br> /per page</td>
+                <td>
+                    <button class="toggle-features-btn" data-plan="basic">+ Show Features</button>
+                    <div class="features-list basic-features" style="display: none;">
+                        {% for feature in feature_availability %}
+                            {% if feature.basic %}
+                                <p><span class="checkmark green">✔</span> {{ feature.feature }}</p>
+                            {% else %}
+                                <p><span class="checkmark red">✘</span> {{ feature.feature }}</p>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </td>
+                <td rowspan="1"><a href="{% url 'contact' %}" class="btn-primary">Buy Plan</a></td>
+            </tr>
+             Silver Plan Row
+            <tr>
+                <td rowspan="1"><strong>Silver</strong></td>
+                <td rowspan="1">$199 (₹16,517) <br> /per page</td>
+                <td>
+                    <button class="toggle-features-btn" data-plan="silver">+ Show Features</button>
+                    <div class="features-list silver-features" style="display: none;">
+                        {% for feature in feature_availability %}
+                            {% if feature.silver %}
+                                <p><span class="checkmark green">✔</span> {{ feature.feature }}</p>
+                            {% else %}
+                                <p><span class="checkmark red">✘</span> {{ feature.feature }}</p>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </td>
+                <td rowspan="1"><a href="{% url 'contact' %}" class="btn-primary">Buy Plan</a></td>
+            </tr>
+             Gold Plan Row
+            <tr>
+                <td rowspan="1"><strong>Gold</strong></td>
+                <td rowspan="1">$299 (₹24,817) <br>/per page</td>
+                <td>
+                    <button class="toggle-features-btn" data-plan="gold">+ Show Features</button>
+                    <div class="features-list gold-features" style="display: none;">
+                        {% for feature in feature_availability %}
+                            {% if feature.gold %}
+                                <p><span class="checkmark green">✔</span> {{ feature.feature }}</p>
+                            {% else %}
+                                <p><span class="checkmark red">✘</span> {{ feature.feature }}</p>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </td>
+                <td rowspan="1"><a href="{% url 'contact' %}" class="btn-primary">Buy Plan</a></td>
+            </tr>
+             Platinum Plan Row
+            <tr>
+                <td rowspan="1"><strong>Platinum</strong></td>
+                <td rowspan="1">Customised Pricing</td>
+                <td>
+                    <button class="toggle-features-btn" data-plan="platinum">+ Show Features</button>
+                    <div class="features-list platinum-features" style="display: none;">
+                        {% for feature in feature_availability %}
+                            {% if feature.platinum %}
+                                <p><span class="checkmark green">✔</span> {{ feature.feature }}</p>
+                            {% else %}
+                                <p><span class="checkmark red">✘</span> {{ feature.feature }}</p>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </td>
+                <td rowspan="1"><a href="tel:+91-78454 93857" class="btn-primary">Contact</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+    <section class="footer" id="footer" >
+        <div class="footer-content" data-aos="zoom-in-left" data-aos-duration="1000" >
+            <div class="footer-logo">
+                <img src="{% static 'images/harks-logo.png' %}" alt="Aura Harks Technology">
+                <span>Aura Harks Technology</span>
+               <p>Your Trusted Partner in Tech Solutions.Analytics solution delivers actionable insights for informed decisions.</p>
+               <p class="footer-contact" style="margin-top: 40px; width: 50px; margin-left: 20px;">
+                <img src="{% static 'images/footer-call-us-icon.png' %}" alt="footer-call-us-icon" style="vertical-align: middle;">
+                Mobile:<a href="tel:+91-7845493857">7845493857</a>
+                <br>
+                <img src="{% static 'images/footer-email-icon.png' %}" alt="footer-email-us-icon" style="vertical-align: middle;">
+                Email:<a href="mailto:info@auraharkstechnology.com" style="margin-left: 5px;">info@auraharkstechnology.com</a>
+            </p>
+
+            </div>
+
+            <div class="footer-links" >
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'home' %}#about">About</a></li>
+                    <li><a href="{% url 'home' %}#services">Services</a></li>
+                    <li><a href="{% url 'home' %}#pricing">Pricing</a></li>
+                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-services" data-aos="fade-up" data-aos-duration="500" >
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="{% url 'home' %}#services">Web Application Development</a></li>
+                    <li><a href="{% url 'home' %}#services">Product Development</a></li>
+                    <li><a href="{% url 'home' %}#services">Data Analysis</a></li>
+                    <li><a href="{% url 'home' %}#services">AI & ML Design and Development</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-strip">
+            <img src="{% static 'images/footer-u-design.png' %}" >
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Aura Harks Technology. All rights reserved.
+                <span><a href="https://www.linkedin.com/company/harkscorp/mycompany/" class="footer-social" target="_blank" style="margin-left:450px;"><i class="fab fa-linkedin-in"></i></a></span>
+                <span>&nbsp;<a href="https://plus.google.com" class="footer-social" target="_blank" style="margin-right: 300px;"><i class="fab fa-google-plus-g"></i></a></span>
+            </p>
+        </div>
+    </section>
+
+
+
+
+<script>
+        AOS.init({
+        duration: 1000, // Animation duration in milliseconds
+        once: false,// Whether animation should happen only once or every time you scroll up/down
+    });
+
+        // Show/hide the "Move to Top" button based on scroll position
+        document.addEventListener('scroll', function() {
+        const button = document.getElementById('moveToTopBtn');
+        if (window.scrollY > 300) {
+            button.classList.add('show');
+        } else {
+            button.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+  const hamburgerMenu = document.querySelector('.hamburger-menu');
+  const navMenu = document.querySelector('nav ul');
+
+  hamburgerMenu.addEventListener('click', function() {
+    navMenu.classList.toggle('active');
+    console.log("clicked")
+  });
+
+});
+    </script>
+
+    <a href="#top" class="move-to-top" id="moveToTopBtn">
+    <i class="fas fa-chevron-up"></i>
+</a>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get all the toggle buttons
+        const toggleButtons = document.querySelectorAll('.toggle-features-btn');
+
+        // Add event listener to each button
+        toggleButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                // Get the associated feature list
+                const plan = button.getAttribute('data-plan');
+                const featureList = document.querySelector(`.${plan}-features`);
+
+                // Toggle the visibility of the feature list
+                if (featureList.style.display === 'none' || featureList.style.display === '') {
+                    featureList.style.display = 'block';
+                    button.textContent = '- Hide Features';
+                } else {
+                    featureList.style.display = 'none';
+                    button.textContent = '+ Show Features';
+                }
+            });
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Harks Technology</title>
+    {% load static %}
+    
+    <link rel="stylesheet" href="{% static 'css/pricing.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Roboto+Condensed:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="{% static 'images/guru tech logo.jpeg' %}" alt="Aura Harks Technology">
+                <span>Aura Harks Technology</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'services' %}">Services</a></li>
+                    <li><a href="{% url 'pricing' %}">Pricing</a></li>
+                    <li><a href="{% url 'blog' %}">Blog</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero"> 
+        <div class="container">
+            <div class="hero-text">
+                <div class="hero-content">
+                    <h1 class="hero-title">Pricing</h1>
+                    <p class="hero-text">We are here to help you.</p>
+                </div>
+                <div class="btn-primary">
+                    <a href="{% url 'home' %}">Home</a>
+                    <span> >> </span>
+                    <a href="{% url 'pricing' %}">Pricing</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing">
+            <div class="best-offers">
+              <h5>BEST OFFERS</h5>
+              <h2>OUR PRICING PLANS</h2>
+              <p>We believe in transparency, which is why our pricing is clear and straightforward. You’ll know exactly what you’re paying for and what you’ll receive in return, with no hidden fees or surprises.</p>
+            </div>
+            <div class="pricing-container" style="width:100%;">
+              <div class="pricing-box" style="width:40; margin-right:30px;">
+                <img src="{% static 'images/basic-plan-icon.png' %}" alt="basic-plan-icon">
+                <h3>Basic Plan</h3>
+                <p class="price">$27.99</p>
+                <ul>
+                  <li>Ad Management</li>
+                  <li>Live Chat</li>
+                  <li>Multi-Language Content</li>
+                  <li>Conversational Bots</li>
+                  <li>Programmable Chatbots</li>
+                </ul>
+                <a href="{% url 'contact' %}" class="btn-get-started">Get Started</a>
+              </div>
+              <div class="pricing-box">
+                <img src="{% static 'images/silver-plan.png' %}" alt="silver-plan-icon">
+                <h3>Silver Plan</h3>
+                <p class="price">$37.99</p>
+                <ul>
+                  <li>Ad Management</li>
+                  <li>Live Chat</li>
+                  <li>Multi-Language Content</li>
+                  <li>Conversational Bots</li>
+                  <li>Programmable Chatbots</li>
+                </ul>
+                <a href="{% url 'contact' %}" class="btn-get-started">Get Started</a>
+              </div>
+              <div class="pricing-box">
+                <img src="{% static 'images/gold-plan.png' %}" alt="gold-plan-icon">
+                <h3>Gold Plan</h3>
+                <p class="price">$47.99</p>
+                <ul>
+                  <li>Ad Management</li>
+                  <li>Live Chat</li>
+                  <li>Multi-Language Content</li>
+                  <li>Conversational Bots</li>
+                  <li>Programmable Chatbots</li>
+                </ul>
+                <a href="{% url 'contact' %}" class="btn-get-started">Get Started</a>
+              </div>
+            </div>
+          </section>
+      
+
+          <section class="footer">
+            <div class="footer-content">
+                <div class="logo">
+                    <img src="{% static 'images/guru tech logo.jpeg' %}" alt="Aura Harks Technology">
+                    <span>Aura Harks Technology</span>
+                </div>
+                <div class="footer-contact">
+                    <p><i class="fas fa-phone-alt"></i> Call us: <a href="tel:+917845493857">+91 7845493857</a></p>
+                </div>
+                <div class="footer-contact">
+                    <p><i class="fas fa-envelope"></i> Email us: <a href="mailto:info@harkscorp.com">info@harkscorp.com</a></p>
+                </div>
+                       
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services" style="margin-right: 25%;">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#web-app-dev">Web Application Development</a></li>
+                        <li><a href="#product-dev">Product Development</a></li>
+                        <li><a href="#data-analysis">Data Analysis</a></li>
+                        <li><a href="#tech-solutions">Tech Solutions</a></li>
+                        <li><a href="#ai-ml">AI & ML Design and Development</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-strip"></div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Aura Harks Technology. All rights reserved.</p>
+            </div>
+           
+            
+        </section>

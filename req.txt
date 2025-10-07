@@ -1,0 +1,8 @@
+1.Create and Activate a Virtual Environment
+
+	python -m venv venv
+	venv\Scripts\activate
+
+2.Install Packages
+
+	pip install django

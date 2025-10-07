@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+
+        <!-- title-->
+        <title>Aura Harks Technology</title>
+        {% load static %}
+
+        <!-- Favicon -->
+        <link rel="icon" href="{% static 'images/harks-logo.png' %}" type="image/x-icon">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+        <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Roboto+Condensed:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+
+    <style>
+/* Pricing Table Container */
+.pricing-table-container {
+    padding: 50px 20px;
+    color: black;
+    border-radius: 16px;
+    max-width: 2000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Title */
+.pricing-title {
+    font-size: 42px;
+    margin-bottom: 40px;
+}
+
+/* Table */
+.pricing-table {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Features Column */
+.features-column {
+    flex: 1;
+    border-right: 2px solid rgba(255, 255, 255, 0.1);
+    padding-right: 20px;
+    margin-top: 30px;
+    text-align: justify;
+}
+
+.features-column h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    margin-right:39px;
+
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin:20px 0;
+}
+
+.features-list li {
+    font-size: 18px;
+    padding: 10px ;
+    margin-top: 5px;
+    text-align:center;
+
+}
+
+.features-list li:nth-child(odd) {
+    background-color: #f3f3f3;
+}
+
+.features-list li:nth-child(even) {
+    background-color: #fafafa;
+}
+
+/* Plans Column */
+.plans-column {
+    display: flex;
+    flex: 4;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* Plan Card */
+.plan-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    width: 30%;
+    max-width: 240px;
+    border: 2px solid #ddd;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Plan Title */
+.plan-title {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+/* Price */
+.price {
+    font-weight: light;
+    font-size: 30px;
+    color: #fa6400;
+}
+
+/* Plan Features */
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.plan-features li {
+    font-size: 18px;
+    padding: 13px ;
+}
+
+.plan-features li:nth-child(odd) {
+    background-color: #f3f3f3;
+}
+
+.plan-features li:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.plan-features li::after {
+    content: ''; /* No content on desktop */
+}
+
+.available {
+    color: #22c55e;
+}
+
+.not-available {
+    color: #ef4444;
+}
+
+.checkmark {
+    margin-right: 8px;
+}
+
+/* Buttons */
+.btn-primary {
+    background: #FF512F;
+    background: -webkit-linear-gradient(to right, #F09819, #FF512F);
+    background: linear-gradient(to right, #F09819, #FF512F);
+    color: black;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #ffd700;
+    color: #302b63;
+}
+
+/* General Styles (already provided) */
+
+/* Mobile View (Up to 768px) */
+@media (max-width: 768px) {
+    .pricing-table {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .features-column {
+        display: none;
+    }
+
+    .plans-column {
+        width: 100%;
+    }
+
+    .plan-card {
+        width: 90%;
+        max-width: 100%;
+        text-align: left;
+        padding: 20px;
+    }
+
+    .plan-title {
+        font-size: 22px;
+    }
+
+    .price {
+        font-size: 20px;
+    }
+
+   .plan-features li::after {
+        content: attr(data-feature); /* Display the feature name from the data attribute */
+        font-size: 16px;
+        color: #333;
+        margin-left: 8px;
+        display: inline-block;
+    }
+
+    .plan-features li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .checkmark {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .available {
+        color: #22c55e; /* Green for available features */
+    }
+
+    .not-available {
+        color: #ef4444; /* Red for not available features */
+    }
+
+    .btn-primary {
+        font-size: 14px;
+        padding: 10px 20px;
+        margin-top: 10px;
+        display: block;
+    }
+}
+
+/* Default Desktop View - Hide Feature Names */
+.plan-features li::after {
+    content: ''; /* No content on desktop */
+}
+
+/* Tablet & Mobile View - Show Feature Names */
+@media (max-width: 1024px) {
+    .features-column{
+        display:none;
+    }
+    .plan-features li::after {
+        content: attr(data-feature); /* Display feature name using the data attribute */
+        font-size: 16px;
+        color: #333;
+        margin-left: 8px;
+        display: inline-block;
+    }
+
+    .plan-features li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .checkmark {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .available {
+        color: #22c55e; /* Green for available features */
+    }
+
+    .not-available {
+        color: #ef4444; /* Red for not available features */
+    }
+
+
+}
+
+/* Mobile-specific adjustments (smaller screens up to 768px) */
+@media (max-width: 768px) {
+
+     .features-column{
+        display:none;
+    }
+
+    .plan-features li::after {
+        font-size: 14px; /* Slightly smaller font for mobile */
+        color: #444;
+    }
+
+    .plan-card {
+        padding: 15px;
+    }
+
+    .price {
+        font-size: 18px;
+    }
+
+    .btn-primary {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+
+
+    </style>
+
+<body>
+    <section class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="{% static 'images/harks-logo.png' %}" alt="Aura Harks Technology Logo">
+                <span div data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000">AURA HARKS TECHNOLOGY</span>
+            </div>
+            <div class="hamburger-menu">
+                <span class="hamburger-icon">☰</span>
+            </div>
+            <nav>
+                <ul div data-aos="flip-right"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000">
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'home' %}#about">About</a></li>
+                    <li><a href="{% url 'home' %}#services">Services</a></li>
+                    <li><a href="{% url 'home' %}#pricing">Pricing</a></li>
+                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <section class="hero" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <div class="hero-text" data-aos="fade-up" data-aos-duration="1500">
+                <div class="hero-content">
+                    <h1 class="hero-title" data-aos="fade-up" data-aos-duration="1500">Pricing</h1>
+                    <p class="hero-text" data-aos="flip-center" data-aos-duration="1500">Simple and Scalable Pricing</p>
+                </div>
+                <div class="btn-primary" data-aos="fade-left" data-aos-duration="2000">
+                    <a href="{% url 'home' %}">Home</a>
+                    <span> >> </span>
+                    <a href="{% url 'home' %}#pricing">Pricing</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<div class="pricing-table-container">
+    <h1 class="pricing-title">Our Pricing Plans</h1>
+
+    <div class="pricing-table">
+        <!-- Features Column -->
+        <div class="features-column">
+            <h2>Plan</h2>
+            <h2>Pricing</h2>
+            <h2 style="margin-bottom:-17px;">Features</h2>
+            <ul class="features-list">
+                {% for feature in feature_availability %}
+                <li>{{ feature.feature }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <!-- Plans Column -->
+        <div class="plans-column">
+            <!-- Basic Plan -->
+            <div class="plan-card">
+                <h2 class="plan-title">Basic</h2>
+                <p class="price">$99 (₹8,217) <span>/per page</span></p>
+                <ul class="plan-features">
+                    {% for feature in feature_availability %}
+                    <li class="{% if feature.basic %}available{% else %}not-available{% endif %}" data-feature="{{ feature.feature }}">
+                        {% if feature.basic %}<span class="checkmark">✔</span>{% else %}<span class="checkmark">✘</span>{% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+                <a href="{% url 'contact' %}" class="btn-primary">Buy Plan</a>
+            </div>
+
+            <!-- Silver Plan -->
+            <div class="plan-card">
+                <h2 class="plan-title">Silver</h2>
+                <p class="price">$199 (₹16,517) <span>/per page</span></p>
+                <ul class="plan-features">
+                    {% for feature in feature_availability %}
+                    <li class="{% if feature.silver %}available{% else %}not-available{% endif %}" data-feature="{{ feature.feature }}">
+                        {% if feature.silver %}<span class="checkmark">✔</span>{% else %}<span class="checkmark">✘</span>{% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+                <a href="{% url 'contact' %}" class="btn-primary">Buy Plan</a>
+            </div>
+
+            <!-- Gold Plan -->
+            <div class="plan-card">
+                <h2 class="plan-title">Gold</h2>
+                <p class="price">$299 (₹24,817)<span> /per page</span></p>
+                <ul class="plan-features">
+                    {% for feature in feature_availability %}
+                    <li class="{% if feature.gold %}available{% else %}not-available{% endif %}" data-feature="{{ feature.feature }}">
+                        {% if feature.gold %}<span class="checkmark">✔</span>{% else %}<span class="checkmark">✘</span>{% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+                <a href="{% url 'contact' %}" class="btn-primary">Buy Plan</a>
+            </div>
+
+            <!-- Platinum Plan -->
+            <div class="plan-card">
+                <h2 class="plan-title">Platinum</h2>
+                <p class="price">Customised Pricing</p>
+                <ul class="plan-features">
+                    {% for feature in feature_availability %}
+                    <li class="{% if feature.platinum %}available{% else %}not-available{% endif %}" data-feature="{{ feature.feature }}">
+
+                        {% if feature.platinum %}<span class="checkmark">✔</span>{% else %}<span class="checkmark">✘</span>{% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+                <a href="{% url 'contact' %}" class="btn-primary">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    <section class="footer" id="footer" >
+        <div class="footer-content" data-aos="zoom-in-left" data-aos-duration="1000" >
+            <div class="footer-logo">
+                <img src="{% static 'images/harks-logo.png' %}" alt="Aura Harks Technology">
+                <span>Aura Harks Technology</span>
+               <p>Your Trusted Partner in Tech Solutions.Analytics solution delivers actionable insights for informed decisions.</p>
+               <p class="footer-contact" style="margin-top: 40px; width: 50px; margin-left: 20px;">
+                <img src="{% static 'images/footer-call-us-icon.png' %}" alt="footer-call-us-icon" style="vertical-align: middle;">
+                Mobile:<a href="tel:+91-7845493857">7845493857</a>
+                <br>
+                <img src="{% static 'images/footer-email-icon.png' %}" alt="footer-email-us-icon" style="vertical-align: middle;">
+                Email:<a href="mailto:info@auraharkstechnology.com" style="margin-left: 5px;">info@auraharkstechnology.com</a>
+            </p>
+
+            </div>
+
+            <div class="footer-links" >
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'home' %}#about">About</a></li>
+                    <li><a href="{% url 'home' %}#services">Services</a></li>
+                    <li><a href="{% url 'home' %}#pricing">Pricing</a></li>
+                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-services" data-aos="fade-up" data-aos-duration="500" >
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="{% url 'home' %}#services">Web Application Development</a></li>
+                    <li><a href="{% url 'home' %}#services">Product Development</a></li>
+                    <li><a href="{% url 'home' %}#services">Data Analysis</a></li>
+                    <li><a href="{% url 'home' %}#services">AI & ML Design and Development</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-strip">
+            <img src="{% static 'images/footer-u-design.png' %}" >
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Aura Harks Technology. All rights reserved.
+                <span><a href="https://www.linkedin.com/company/harkscorp/mycompany/" class="footer-social" target="_blank" style="margin-left:450px;"><i class="fab fa-linkedin-in"></i></a></span>
+                <span>&nbsp;<a href="https://plus.google.com" class="footer-social" target="_blank" style="margin-right: 300px;"><i class="fab fa-google-plus-g"></i></a></span>
+            </p>
+        </div>
+    </section>
+
+
+
+
+<script>
+        AOS.init({
+        duration: 1000, // Animation duration in milliseconds
+        once: false,// Whether animation should happen only once or every time you scroll up/down
+    });
+
+        // Show/hide the "Move to Top" button based on scroll position
+        document.addEventListener('scroll', function() {
+        const button = document.getElementById('moveToTopBtn');
+        if (window.scrollY > 300) {
+            button.classList.add('show');
+        } else {
+            button.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+  const hamburgerMenu = document.querySelector('.hamburger-menu');
+  const navMenu = document.querySelector('nav ul');
+
+  hamburgerMenu.addEventListener('click', function() {
+    navMenu.classList.toggle('active');
+    console.log("clicked")
+  });
+
+});
+    </script>
+
+    <a href="#top" class="move-to-top" id="moveToTopBtn">
+    <i class="fas fa-chevron-up"></i>
+</a>
+
+
+// <script>
+//     document.addEventListener('DOMContentLoaded', function () {
+//         // Get all the toggle buttons
+//         const toggleButtons = document.querySelectorAll('.toggle-features-btn');
+
+//         // Add event listener to each button
+//         toggleButtons.forEach(button => {
+//             button.addEventListener('click', function () {
+//                 // Get the associated feature list
+//                 const plan = button.getAttribute('data-plan');
+//                 const featureList = document.querySelector(`.${plan}-features`);
+
+//                 // Toggle the visibility of the feature list
+//                 if (featureList.style.display === 'none' || featureList.style.display === '') {
+//                     featureList.style.display = 'block';
+//                     button.textContent = '- Hide Features';
+//                 } else {
+//                     featureList.style.display = 'none';
+//                     button.textContent = '+ Show Features';
+//                 }
+//             });
+//         });
+//     });
+// </script>
+
+<script>
+function toggleFeatures(id) {
+    var featureList = document.getElementById(id);
+    if (featureList.style.display === "none") {
+        featureList.style.display = "block";
+    } else {
+        featureList.style.display = "none";
+    }
+}
+</script>
+
+<script>
+function toggleFeatures(button, id) {
+    var featureList = document.getElementById(id);
+    if (featureList.style.display === "none") {
+        featureList.style.display = "block";
+        button.innerHTML = "- Hide Features";
+    } else {
+        featureList.style.display = "none";
+        button.innerHTML = "+ Show Features";
+    }
+}
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
